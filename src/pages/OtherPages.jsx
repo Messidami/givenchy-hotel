@@ -13,6 +13,16 @@ import restaurantImg from "../assets/dining/restaurant.jpg"
 import rooftopImg from "../assets/dining/rooftop.jpg"
 import vipImg from "../assets/dining/vip.jpg"
 
+import img1 from "../assets/images/img1.jpg";
+import img2 from "../assets/images/img2.jpg";
+import img3 from "../assets/images/img3.jpg";
+import img4 from "../assets/images/img4.jpg";
+
+import hotelImg from "../assets/images/outside.jpg"; 
+import hotelImg2 from "../assets/images/aboutroom.jpg";
+import hotelImg3 from "../assets/images/walkway.jpg";
+
+
 const WHATSAPP = '2348036767006'
 
 // ========= SHARED WINE SECTION (EXPORTED) =========
@@ -47,7 +57,7 @@ export function WineSection() {
     <section className="section wine-section-alt" style={{ background: '#0a0a0a', borderTop: '1px solid var(--border)' }}>
       <div className="container">
         <SectionHeader label="Cellar Collection" title="Givenchy Exclusive Wines" center>
-          <p className="sec-p" style={{ margin: '0 auto' }}>
+          <p className="sec-p" style={{ margin: '4 auto' }}>
             Experience our exclusive in-house wine collection, curated for the discerning palate.
           </p>
         </SectionHeader>
@@ -91,9 +101,9 @@ export function DiningPage({ navigate }) {
     { 
         img: rooftopImg, 
         tag: '5:00 PM — 2:00 AM', 
-        title: 'Cloud 9 Rooftop Bar', 
+        title: 'A Refined Dining & Wine Experience', 
         type: 'rooftop_bar', 
-        desc: 'Sip premium cocktails under the stars with the most breathtaking view of the Awka skyline.' 
+        desc: '' 
     },
     { 
         img: vipImg, 
@@ -135,7 +145,7 @@ export function DiningPage({ navigate }) {
                   <span style={{ color: 'var(--gold)', fontSize: 11, fontWeight: 600, textTransform: 'uppercase', letterSpacing: 2 }}>{v.tag}</span>
                   <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, margin: '10px 0', color: '#fff' }}>{v.title}</h3>
                   <p style={{ color: '#999', fontSize: 14, marginBottom: 20, lineHeight: 1.6 }}>{v.desc}</p>
-                  <button className="btn-outline-gold" onClick={() => setActiveVenue(v)}>Book This Venue</button>
+                  <button className="btn-outline-gold" onClick={() => setActiveVenue(v)}>Order Now</button>
                 </div>
               </motion.div>
             ))}
@@ -218,10 +228,10 @@ export function AboutPage({ navigate }) {
           <div className="about-grid">
             <FadeIn direction="right">
               <div className="about-imgs">
-                <div className="img-zoom about-img-tall"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=500&q=80" alt="Hotel" /></div>
+                <div className="img-zoom about-img-tall"><img src={hotelImg} alt="Hotel" /></div>
                 <div style={{ display:'flex', flexDirection:'column', gap:10 }}>
-                  <div className="img-zoom about-img-sm"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="Pool" /></div>
-                  <div className="img-zoom about-img-sm"><img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&q=80" alt="Restaurant" /></div>
+                  <div className="img-zoom about-img-sm"><img src={hotelImg2} alt="Room" /></div>
+                  <div className="img-zoom about-img-sm"><img src={hotelImg3} alt="view" /></div>
                 </div>
               </div>
             </FadeIn>
@@ -304,7 +314,7 @@ export function EventsPage({ navigate }) {
 
 // ========= GALLERY PAGE =========
 export function GalleryPage({ navigate }) {
-  const imgs = ['https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=500&q=80','https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&q=80','https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=500&q=80','https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&q=80']
+  const imgs = [img1, img2, img3, img4]
   return (
     <>
       <PageHero bg="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=1400&q=80" title="Gallery" breadcrumb="Gallery" />

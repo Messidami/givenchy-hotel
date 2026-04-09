@@ -11,6 +11,9 @@ import executiveImg from "../assets/rooms/executive.jpg";
 import mastersImg from "../assets/rooms/masters.jpg";
 import kingsImg from "../assets/rooms/kings.jpg";
 
+import hotelImg from "../assets/images/outside.jpg"; 
+import hotelImg2 from "../assets/images/aboutroom.jpg";
+import hotelImg3 from "../assets/images/walkway.jpg";
 const SLIDES = [
   { bg: bg1, label: 'Welcome to Givenchy' },
   { bg: bg2, label: 'World-Class Amenities' },
@@ -130,10 +133,10 @@ export default function HomePage({ navigate, openModal }) {
           <div className="about-grid">
             <FadeIn direction="right">
               <div className="about-imgs">
-                <div className="img-zoom about-img-tall"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=500&q=80" alt="Hotel" /></div>
+                <div className="img-zoom about-img-tall"> <img src={hotelImg} alt="Hotel" /></div>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                  <div className="img-zoom about-img-sm"><img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&q=80" alt="Room" /></div>
-                  <div className="img-zoom about-img-sm"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&q=80" alt="Pool" /></div>
+                  <div className="img-zoom about-img-sm"><img src={hotelImg2} alt="Room" /></div>
+                  <div className="img-zoom about-img-sm"><img src={hotelImg3} alt="view" /></div>
                 </div>
               </div>
             </FadeIn>
@@ -337,9 +340,9 @@ export default function HomePage({ navigate, openModal }) {
 
  <iframe
   className="loc-map-img"
-  src="https://www.google.com/maps?q=6.188399,7.050298&hl=en&z=16&output=embed"
-  width="100%"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.565613013059!2d7.0502549!3d6.1888361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10439d9ab62c9e3d%3A0xe29a5054ec09c662!2sGivenchy%20Luxury%20Hotel%20%26%20Suites!5e0!3m2!1sen!2sng!4v1775721841376!5m2!1sen!2sng"
   height="300"
+  width= "50%"
   style={{ border: 0 }}
   loading="lazy"
   title="Givenchy Luxury Hotel & Suites Location"
